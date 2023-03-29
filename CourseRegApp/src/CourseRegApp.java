@@ -4,23 +4,23 @@ public class CourseRegApp {
 
         // create 3 courses
         // ===========COURSES=============
-        Course OOPSection5;
-        OOPSection5 = new Course("Academic Communication Skills", "ENGL9090", 2);
+        Course engClass;
+        engClass = new Course("Academic Communication Skills", "ENGL9090", 2);
 
-        Course OOPSection6 = new Course();
-        OOPSection6.setCourseCode("SECJ2032");
-        OOPSection6.setCredit(4);
-        OOPSection6.setName("Object Oriented Programming");
+        Course javaClass = new Course();
+        javaClass.setCourseCode("SECJ2032");
+        javaClass.setCredit(4);
+        javaClass.setName("Object Oriented Programming");
 
-        Course OOPSection7 = new Course("Operating System", "SECR0069", 3);
+        Course osClass = new Course("Operating System", "SECR0069", 3);
 
         Course listOfCourse[] = new Course[3];
         // or
         // Course listOfCourse[];
         // listOfCourse = new Course[3];
-        listOfCourse[0] = OOPSection5;
-        listOfCourse[1] = OOPSection6;
-        listOfCourse[2] = OOPSection7;
+        listOfCourse[0] = engClass;
+        listOfCourse[1] = javaClass;
+        listOfCourse[2] = osClass;
 
         // ========LECTURER===========
         Lecturer l1 = new Lecturer("Hazinah", "15501", "FC Networking");
@@ -32,7 +32,12 @@ public class CourseRegApp {
         Student s2 = new Student("Bilkis", "A20EC0012", 2001);
         Student s3 = new Student("Zie", "A21EC0209", 1999);
         Student s4 = new Student("Aisyah", "A21EC0900", 2000);
-
+        Student s5 = new Student("Muhammad", "A20ET0675", 1998);
+        Student s6 = new Student("Aaron", "A22EC0001", 2001);
+        Student s7 = new Student("Brandon", "A21EM4509", 1997);
+        Student s8 = new Student("Ching", "A22EA0022", 2003);
+        Student s9 = new Student("Nur", "A19EE0059", 2000);
+        
         System.out.println("=== LIST OF COURSES (updated toString method)===");
         for (int i = 0; i < 3; i++) {
             System.out.println(listOfCourse[i].toString());
@@ -43,18 +48,44 @@ public class CourseRegApp {
         System.out.println(l2.getName() + ", " + l1.getStaffNum() + ", " + l2.getDept());
         System.out.println(l3.getName() + ", " + l1.getStaffNum() + ", " + l3.getDept());
 
-        s1.regCourse(OOPSection7);
-        OOPSection7.addStudent(s1);
+        //Inserting student into os class
+        s1.regCourse(osClass);
+        osClass.addStudent(s1);
+        s2.regCourse(engClass);
+        osClass.addStudent(s2);
+        s3.regCourse(osClass);
+        osClass.addStudent(s3);
+        s5.regCourse(osClass);
+        osClass.addStudent(s5);
+        s8.regCourse(osClass);
+        osClass.addStudent(s8);
 
-        s2.regCourse(OOPSection5);
-        OOPSection5.addStudent(s2);
+        //Inserting student into eng class
+        s2.regCourse(engClass);
+        engClass.addStudent(s2);
+        s3.regCourse(engClass);
+        engClass.addStudent(s3);
+        s5.regCourse(engClass);
+        engClass.addStudent(s5);
+        s6.regCourse(engClass);
+        engClass.addStudent(s6);
+        s7.regCourse(engClass);
+        engClass.addStudent(s7);
+        s9.regCourse(engClass);
+        engClass.addStudent(s9);
 
-        s3.regCourse(OOPSection6);
-        s4.regCourse(OOPSection6);
-        OOPSection6.addStudent(s3);
-        OOPSection6.addStudent(s4);
+        //Inserting students in java class
+        s3.regCourse(javaClass);
+        javaClass.addStudent(s3);
+        s4.regCourse(javaClass);
+        javaClass.addStudent(s4);
+        s4.regCourse(javaClass);
+        javaClass.addStudent(s4);
+        
 
-        System.out.println("\n=== STUDENT FROM OOP-6 ===");
-        OOPSection6.printStudents();
+        osClass.printStudents();
+        engClass.printStudents();
+        javaClass.printStudents();
+
     }
 }
