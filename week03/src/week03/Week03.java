@@ -22,7 +22,7 @@ public class Week03 {
         Scanner keyboard = new Scanner(System.in);
         String name = jop.showInputDialog("Please enter your name: ");
         int yob = Integer.parseInt(jop.showInputDialog("YOB: "));
-        float berat = Float.parseFloat(jop.showInputDialog("Weight (kg): "));
+        float berat = Float.parseFloat(jop.showInputDialog("Weight (kg): "));   
         float tinggi = Float.parseFloat(jop.showInputDialog("Height (m): "));
         
         Person p = new Person(name,yob,berat,tinggi);
