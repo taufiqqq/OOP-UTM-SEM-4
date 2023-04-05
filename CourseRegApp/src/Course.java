@@ -70,7 +70,6 @@ public class Course {
             }
         } else
             System.out.println("FULL");
-
     }
 
     public void addLecturer(Lecturer l) {
