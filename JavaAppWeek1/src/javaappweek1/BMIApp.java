@@ -40,6 +40,7 @@ public class BMIApp {
         System.out.print("Enter height: ");
         float height = s.nextFloat();
         
+        s.close();
         p = new Person(name, yob, weight, height);
     }
 }

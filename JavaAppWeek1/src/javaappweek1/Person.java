@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package week03;
+package javaappweek1;
 
 /**
  *
@@ -14,6 +14,10 @@ public class Person {
     String name;
     int yob;
     float weight, height, bmi;
+    int hn;
+    String sa;
+
+    Address a = new Address();
 
     // constructors (2)
     public Person() {
@@ -24,6 +28,30 @@ public class Person {
         this.yob = a;
         this.weight = w;
         this.height = h;
+    }
+
+    public Person(String n, int a, float w, float h, int hn, String sa) {
+        this.name = n;
+        this.yob = a;
+        this.weight = w;
+        this.height = h;
+        this.hn = hn;
+        this.sa = sa;
+
+        hn = 100;
+        sa = "new street address";
+    }
+
+    public Person(String n, int yob, float w, float h, Address a) {
+        this.name = n;
+        this.yob = yob;
+        this.weight = w;
+        this.height = h;
+        this.a = a;
+        //a = a, thus referenced. if we change a, it will reflect too
+
+        a.setHomeNum(100);
+        a.setStreetAddress("new street address");
     }
 
     public void calcBmi() {
@@ -47,6 +75,10 @@ public class Person {
         this.weight = w;
     }
 
+    public void setAddress(Address a){
+        this.a = a;
+    }
+
     // all getters /accesors (5)
     public String getName() {
         return name;
@@ -66,6 +98,14 @@ public class Person {
 
     public float getBmi() {
         return bmi;
+    }
+
+    public Address getAddress(){
+        return a;
+    }
+
+    public String getAddressDetail(){
+        return hn + ", " + sa;
     }
 
     @Override

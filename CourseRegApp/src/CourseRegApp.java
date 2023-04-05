@@ -19,10 +19,7 @@ public class CourseRegApp {
 
         Course osClass = new Course("Operating System", "SECR0069", 3);
 
-        Course listOfCourse[] = new Course[3];
-        // or
-        // Course listOfCourse[];
-        // listOfCourse = new Course[3];
+        Course listOfCourse[] = new Course[5];
         listOfCourse[0] = engClass;
         listOfCourse[1] = javaClass;
         listOfCourse[2] = osClass;
