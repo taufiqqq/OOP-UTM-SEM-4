@@ -1,5 +1,9 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
+        Scanner s = new Scanner(System.in);
+
         // 1st syntax
         String[] aList;
         aList = new String[10];
@@ -22,10 +26,18 @@ public class App {
             System.out.println("Value of String : " + a);
         }
 
+        int position = 0;
+        while (position < aChar.length) {
+            System.out.println("Value of char " + position + ": " + aChar[position]);
+            ++position;
+        }
+
         int i = 0;
-        while (i < aChar.length) {
-            System.out.println("Value of char " + i + ": " + aChar[i]);
-            ++i;
+        for (float temp : fNum) {
+            System.out.println("Enter the value: ");
+            temp = s.nextFloat();
+            fNum[i] = temp;
+            i++;
         }
 
         float largestElement = fNum[0];
@@ -35,12 +47,12 @@ public class App {
 
         for (int j = 0; j < fNum.length; j++) {
             System.out.println("List of float [" + j + "] : " + fNum[j]);
-            
+
             sum = sum + fNum[j];
-            
+
             if (fNum[j] > largestElement)
                 largestElement = fNum[j];
-            
+
             if (fNum[j] < smallestElement) {
                 smallestIndex = j;
                 smallestElement = fNum[j];
@@ -50,5 +62,7 @@ public class App {
         System.out.println("Sum of Array: " + sum);
         System.out.println("Largest Element: " + largestElement);
         System.out.println("Smallest Index: " + smallestIndex + " with element of " + smallestElement);
+
+        s.close();
     }
 }
