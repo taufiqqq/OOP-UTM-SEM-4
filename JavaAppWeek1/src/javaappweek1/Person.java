@@ -26,6 +26,33 @@ public class Person {
         this.height = h;
     }
 
+<<<<<<< Updated upstream
+=======
+    public Person(String n, int a, float w, float h, int hn, String sa) {
+        this.name = n;
+        this.yob = a;
+        this.weight = w;
+        this.height = h;
+        this.hn = hn;
+        this.sa = sa;
+
+        hn = 100;
+        sa = "new street address";
+    }
+
+    public Person(String n, int yob, float w, float h, Address a) {
+        this.name = n;
+        this.yob = yob;
+        this.weight = w;
+        this.height = h;
+        this.a = a;
+        //a = a, thus referenced. if we change a, it will reflect too
+
+        a.setHomeNum(100);
+        a.setStreetAddress("New Street Address");
+    }
+
+>>>>>>> Stashed changes
     public void calcBmi() {
         bmi = weight / (height * height);
     }
