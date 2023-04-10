@@ -31,9 +31,13 @@ public class App {
             ++position;
         }
 
-        displayAll(fNum);
         displayAll(aList);
-
+        displayAll(fNum);
+        
+        swapValue(fNum);
+        System.out.println("Swapped Element:-");
+        displayAll(fNum);
+        
         float result = sumMethod(fNum);
         float largest = findLargest(fNum);
         float smallest = findSmallest(fNum);
@@ -46,7 +50,7 @@ public class App {
 
     private static void displayAll(float[] xyz) {
         for (float temp : xyz) {
-            System.out.println("Declared method : " + temp);
+            System.out.println("Element : " + temp);
         }
     }
 
@@ -84,5 +88,10 @@ public class App {
         return smallest;
     }
 
+    private static void swapValue(float[] listFloat){
+        float temp = listFloat[listFloat.length-1];
+        listFloat[listFloat.length-1] = listFloat[0];
+        listFloat[0] = temp;
+    }
 
 }
