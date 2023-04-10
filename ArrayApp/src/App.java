@@ -5,8 +5,7 @@ public class App {
         Scanner s = new Scanner(System.in);
 
         // 1st syntax
-        String[] aList;
-        aList = new String[10];
+        String[] aList = { "Najwan", "Sam", "Fique", "Luqman", "Am", "Ika", "Auni", "Arshad", "Mankal", "Marul" };
 
         // 2nd syntax
         int[] aNum = new int[10];
@@ -62,7 +61,8 @@ public class App {
         System.out.println("Sum of Array: " + sum);
         System.out.println("Largest Element: " + largestElement);
         System.out.println("Smallest Index: " + smallestIndex + " with element of " + smallestElement);
-
+        
         s.close();
     }
+
 }
