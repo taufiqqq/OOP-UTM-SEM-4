@@ -66,22 +66,25 @@ public class AppArray2D {
             System.out.println();
         }
 
-        double sum = 0;
-        double largest = cmas[0][0];
-        int position[] = {0, 0};
+        double sum[] = { 0, 0, 0 };
+        double largest = 0;
+        int position = 0;
         System.out.println("\nSum of Mark: ");
         for (int i = 0; i < cmas.length; i++) {
             for (int j = 0; j < cmas[i].length; j++) {
-                sum += cmas[i][j];
-                if (cmas[i][j] > largest){
-                    largest = cmas[i][j];
-                    position[0] = i;
-                    position[1] = j;
-                }
+                sum[i] += cmas[i][j];
+            }
+            if (sum[i] > largest) {
+                largest = sum[i];
+                position = i;
+
             }
         }
-        System.out.println("Sum is : " + sum);
-        System.out.println("Student with the highest mark ("+largest+") is positioned at ["+position[0]+"]["+position[1]+"]");
+
+        for (int i = 0; i < sum.length; i++) {
+            System.out.println("Student " + (i + 1) + " sum is : " + sum[i]);
+        }
+        System.out.println("\nStudent " + (position + 1) + " has the highest mark (" + largest + ")");
         s.close();
         /*
          * for (double cm : courseMark) {
