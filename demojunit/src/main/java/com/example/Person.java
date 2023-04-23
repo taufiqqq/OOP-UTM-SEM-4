@@ -6,6 +6,10 @@ public class Person {
     private String category;
 
     public Person() {
+        this.name = "";
+        this.w = 0;
+        this.h = 0;
+        this.category = "";
     }
 
 

@@ -38,13 +38,20 @@ public class PersonTest {
     }
 
     @Test
-    public void testCalculateBMI() {
+    public void testCalculateBMI1() {
         //prep
         Person pt = new Person("ali", 77f, 1.77f);
         pt.setBmi(pt.calculateBMI());
 
         //test
         assertEquals(24.6, pt.getBmi(), 0.5);
+    }
+
+    @Test
+    public void testCalculateBMI2(){
+        Person pt = new Person();
+        pt.setBmi(pt.calculateBMI());
+        assertEquals(0, pt.getBmi(), 0.5);
     }
 
 }
