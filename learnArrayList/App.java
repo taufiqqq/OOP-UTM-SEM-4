@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Float> temp = new ArrayList<>();
         temp.add(Float.valueOf(12.1f));
-        temp.add(3.2f);
+        temp.add(3.2f); //try normal float
         temp.add(Float.valueOf(13f));
         temp.add(Float.valueOf(45f));
         temp.add(Float.valueOf(33.5f));
