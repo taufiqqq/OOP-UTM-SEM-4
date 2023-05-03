@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class App {
     public static void main(String[] args) {
         ArrayList<Float> temp = new ArrayList<>();
         temp.add(Float.valueOf(12.1f));
