@@ -1,0 +1,15 @@
+EXAMINATION RESULTS FOR SEM 2, 2018/2019
+
+Name      : Amir Hafsyam bin Abdullah
+Matric No : A17CS0010
+
+CODE         COURSE                                    CREDIT    GRADE
+======================================================================
+SCSJ2203      Software Engineering                      3         A
+SCSJ2154      Object Oriented Programming               4         B
+ULAB2122      Advanced Academic English Skills          2         A
+SCSR2043      Operating System                          3         B
+SCSV1223      Web Programming                           3         A
+======================================================================
+Credit Earned : 15
+GPA           : 3.53
